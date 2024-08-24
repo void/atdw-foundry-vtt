@@ -1,0 +1,14 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "foundry/*": [
+        "app//*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+  ]
+}
