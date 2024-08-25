@@ -9,7 +9,7 @@ ATDW.abilities = {
   dex: 'ATDW.Ability.Dex.long',
   con: 'ATDW.Ability.Con.long',
   int: 'ATDW.Ability.Int.long',
-  wis: 'ATDW.Ability.Wis.long',
+  wil: 'ATDW.Ability.Wil.long',
   cha: 'ATDW.Ability.Cha.long',
 };
 
@@ -18,6 +18,6 @@ ATDW.abilityAbbreviations = {
   dex: 'ATDW.Ability.Dex.abbr',
   con: 'ATDW.Ability.Con.abbr',
   int: 'ATDW.Ability.Int.abbr',
-  wis: 'ATDW.Ability.Wis.abbr',
+  wis: 'ATDW.Ability.Wil.abbr',
   cha: 'ATDW.Ability.Cha.abbr',
 };
