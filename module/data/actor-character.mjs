@@ -1,4 +1,5 @@
 import ATDWActorBase from "./base-actor.mjs";
+const Roll = foundry.dice.Roll
 
 export default class ATDWCharacter extends ATDWActorBase {
 
@@ -33,18 +34,40 @@ export default class ATDWCharacter extends ATDWActorBase {
   }
 
   getRollData() {
-    const data = {};
+    		const data = this.toObject();
+
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
     if (this.abilities) {
       for (let [k,v] of Object.entries(this.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
+        console.log(v)
+        data.abilities[k] = v.value
       }
     }
 
     data.lvl = this.attributes.level.value;
 
     return data
+  }
+  async roll(options) {
+    const rollData = this.getRollData()
+
+    console.log('Rolling from character')
+    console.log(options)
+    console.log(rollData)
+
+    if  (options?.attr && rollData.abilities?.[options.attr]) {
+         let formula = `1d20 + @abilities.${options.attr}`
+         console.log('Formula: ' + formula)
+
+        let roll = new Roll(formula, rollData)
+        await roll.evaluate()
+        roll.toMessage()
+
+        console.log(roll.total)
+    }
+
+
   }
 }
