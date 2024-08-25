@@ -10,6 +10,7 @@ import { ATDW } from './helpers/config.mjs';
 // Import DataModel classes
 import * as models from './data/_module.mjs';
 
+import CheckRoll from './roll.mjs';
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
@@ -69,6 +70,9 @@ Hooks.once('init', function () {
     label: 'ATDW.SheetLabels.Item',
   });
 
+
+  	// Dice.
+	CONFIG.Dice.rolls.push(CheckRoll);
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
