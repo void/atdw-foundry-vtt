@@ -12,6 +12,8 @@
 @import 'global/grid';
 @import 'global/flex';
 
+@import 'components/character';
+
 /* Styles limited to atdw sheets */
 .atdw {
   @import 'components/forms';

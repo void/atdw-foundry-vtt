@@ -18,7 +18,7 @@ export class ATDWActorSheet extends ActorSheet {
         {
           navSelector: '.sheet-tabs',
           contentSelector: '.sheet-body',
-          initial: 'features',
+          initial: 'description',
         },
       ],
     });
@@ -253,7 +253,7 @@ export class ATDWActorSheet extends ActorSheet {
       return roll;
     }
     if (dataset.attr) {
-      this.actor.system.roll({'attr':  dataset.attr})
+      this.actor.system.roll({ 'attr': dataset.attr })
     }
   }
 }

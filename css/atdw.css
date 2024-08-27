@@ -203,6 +203,14 @@
   text-align: center;
 }
 
+.window-app.sheet .window-content {
+  background: white;
+}
+.window-app.sheet input[type=text] {
+  background: white;
+  border-radius: 0;
+}
+
 /* Styles limited to atdw sheets */
 .atdw .item-form {
   font-family: "Roboto", sans-serif;
@@ -364,3 +372,5 @@
 .atdw .effects .item .effect-controls {
   border: none;
 }
+
+/*# sourceMappingURL=atdw.css.map */
