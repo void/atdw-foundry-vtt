@@ -22,6 +22,18 @@ export default class ATDWCharacter extends ATDWActorBase {
       return obj;
     }, {}));
 
+    // Iterate over skill names and create a new SchemaField for each.
+    schema.skills = new fields.SchemaField(Object.keys(CONFIG.ATDW.skills).reduce((obj, skill) => {
+      obj[skill] = new fields.SchemaField({
+        value: new fields.NumberField({ ...requiredInteger, initial: CONFIG.ATDW.skills[skill].initial, min: -5, max: 10 }),
+      });
+      return obj;
+    }, {}));
+    console.log('definiendo schema')
+    console.log(schema)
+
+
+
     return schema;
   }
 

@@ -21,3 +21,18 @@ ATDW.abilityAbbreviations = {
   wis: 'ATDW.Ability.Wil.abbr',
   cha: 'ATDW.Ability.Cha.abbr',
 };
+
+ATDW.skills = {
+  arsaidh_technology: { initial: -5 },
+  close_Combat: { initial: 0 },
+  medical_aid: { initial: 0 },
+  manipulation: { initial: 0 },
+  perception: { initial: 0 },
+  pilot: { initial: 0 },
+  ranged_combat: { initial: 0 },
+  resolve: { initial: 0 },
+  science: { initial: 0 },
+  stealth: { initial: 0 },
+  survival: { initial: 0 },
+  technology: { initial: 0 }
+}
