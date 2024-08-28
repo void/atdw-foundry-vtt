@@ -8,15 +8,19 @@
       "Wil": { "long": "Will", "abbr": "wil" },
       "Cha": { "long": "Charisma", "abbr": "cha" }
     },
-    "SheetLabels": {
-      "Actor": "ATDW Actor Sheet",
-      "Item": "ATDW Item Sheet"
-    },
-    "Item": {
-      "Spell": {
-        "SpellLVL": "Level {level} Spells",
-        "AddLVL": "Add LVL {level}"
-      }
+    "Skills": {
+      "arsaidh_technology": "Arsaidh Technology",
+      "close_combat": "Close Combat",
+      "medical_aid": "Medical Aid",
+      "manipulation": "Manipulation",
+      "perception": "Perception",
+      "pilot": "Pilot",
+      "ranged_combat": "Ranged Combat",
+      "resolve": "Resolve",
+      "science": "Science",
+      "stealth": "Stealth",
+      "survival": "Survival",
+      "technology": "Technology"
     },
     "Effect": {
       "Source": "Source",

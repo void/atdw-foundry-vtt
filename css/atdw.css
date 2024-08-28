@@ -211,6 +211,22 @@
   border-radius: 0;
 }
 
+.skills {
+  width: 20em;
+}
+.skills h3 {
+  border: none;
+}
+
+.skill {
+  border-bottom: 1px solid black;
+  margin-bottom: 1em;
+}
+.skill input[type=text] {
+  width: 2em;
+  margin-right: 1em;
+}
+
 /* Styles limited to atdw sheets */
 .atdw .item-form {
   font-family: "Roboto", sans-serif;
@@ -372,5 +388,3 @@
 .atdw .effects .item .effect-controls {
   border: none;
 }
-
-/*# sourceMappingURL=atdw.css.map */

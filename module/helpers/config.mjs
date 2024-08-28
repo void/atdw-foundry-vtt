@@ -24,7 +24,7 @@ ATDW.abilityAbbreviations = {
 
 ATDW.skills = {
   arsaidh_technology: { initial: -5 },
-  close_Combat: { initial: 0 },
+  close_combat: { initial: 0 },
   medical_aid: { initial: 0 },
   manipulation: { initial: 0 },
   perception: { initial: 0 },
@@ -35,4 +35,19 @@ ATDW.skills = {
   stealth: { initial: 0 },
   survival: { initial: 0 },
   technology: { initial: 0 }
+}
+ATDW.skillNames = {
+  arsaidh_technology: "ATDW.Skills.arsaidh_technology",
+  close_combat: "ATDW.Skills.close_combat",
+  medical_aid: "ATDW.Skills.medical_aid",
+  manipulation: "ATDW.Skills.manipulation",
+  perception: "ATDW.Skills.perception",
+  pilot: "ATDW.Skills.pilot",
+  ranged_combat: "ATDW.Skills.ranged_combat",
+  combat: "ATDW.Skills.combat",
+  resolve: "ATDW.Skills.resolve",
+  science: "ATDW.Skills.science",
+  stealth: "ATDW.Skills.stealth",
+  survival: "ATDW.Skills.survival",
+  technology: "ATDW.Skills.technology",
 }

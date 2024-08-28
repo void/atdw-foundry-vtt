@@ -66,7 +66,15 @@
             {{/each}}
           </div>
 
-
+        <div class="skills">
+          <h3>skills</h3>
+            {{#each system.skills as |skill key|}}
+        <div class="skill">
+            <input type="text" name="system.skills.{{key}}.value" value="{{skill.value}}" data-dtype="Number" />
+              <label for="system.skills{{key}}.value" class="resource-label rollable  align-left" data-attr="{{key}}" data-label="{{localize (lookup @root.config.skillNames  key)}}">{{localize (lookup @root.config.skillNames  key)}}</label> 
+            </div>
+            {{/each}}
+    </div>
     </div>
 
     {{!-- Biography Tab --}}
