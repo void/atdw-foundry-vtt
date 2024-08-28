@@ -38,10 +38,15 @@ export default class ATDWCharacter extends ATDWActorBase {
   }
 
   prepareDerivedData() {
-    // Loop through ability scores, and add their modifiers to our sheet output.
+    //  Add labels to abilities
     for (const key in this.abilities) {
       // Handle ability label localization.
       this.abilities[key].label = game.i18n.localize(CONFIG.ATDW.abilities[key]) ?? key;
+    }
+    //  Add labels to skills
+    for (const key in this.skills) {
+      // Handle skill label localization.
+      this.skills[key].label = game.i18n.localize(CONFIG.ATDW.skillNames[key]) ?? key;
     }
   }
 
@@ -57,20 +62,35 @@ export default class ATDWCharacter extends ATDWActorBase {
       }
     }
 
+
+    if (this.skills) {
+      for (let [k, v] of Object.entries(this.skills)) {
+        data.skills[k] = v.value
+      }
+    }
+
+
     data.lvl = this.attributes.level.value;
 
     return data
   }
   async roll(options) {
     const rollData = this.getRollData()
+    var desc
+    var value
 
+    //roll attribute
     if (options?.attr && rollData.abilities?.[options.attr]) {
-      let desc = this.abilities[options.attr].label
-      let value = rollData.abilities[options.attr]
-      let roll = CheckRoll.create(desc, value)
-      roll.toMessage();
+      desc = this.abilities[options.attr].label
+      value = rollData.abilities[options.attr]
     }
 
-
+    //roll skill
+    if (options?.skill && rollData.skills?.[options.skill] != undefined) {
+      desc = this.skills[options.skill].label
+      value = rollData.skills[options.skill]
+    }
+    let roll = CheckRoll.create(desc, value)
+    roll.toMessage();
   }
 }

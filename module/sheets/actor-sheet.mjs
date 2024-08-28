@@ -252,8 +252,12 @@ export class ATDWActorSheet extends ActorSheet {
       });
       return roll;
     }
+
     if (dataset.attr) {
       this.actor.system.roll({ 'attr': dataset.attr })
+    }
+    if (dataset.skill) {
+      this.actor.system.roll({ 'skill': dataset.skill })
     }
   }
 }
