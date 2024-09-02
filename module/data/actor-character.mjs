@@ -29,8 +29,6 @@ export default class ATDWCharacter extends ATDWActorBase {
       });
       return obj;
     }, {}));
-    console.log('definiendo schema')
-    console.log(schema)
 
 
 
