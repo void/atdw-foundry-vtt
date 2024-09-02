@@ -38,9 +38,12 @@ export class ATDWActorSheet extends ActorSheet {
     // sheets are the actor object, the data object, whether or not it's
     // editable, the items array, and the effects array.
     const context = super.getData();
-    context.document = this.document;
-    context.fields = this.document.schema.fields;
-    context.systemFields = this.document.system.schema.fields;
+
+    //put fields on top level context
+    const schema = this.document.system.schema
+    context.level = schema.getField('attributes.level.value')
+    context.wounds = schema.getField('wounds.value')
+
 
     // Use a safe clone of the actor data for further operations.
     const actorData = this.document.toPlainObject();

@@ -14,8 +14,8 @@
         and it will add a small amount of padding, a border, and will
         center all of its child elements content and text. --}}
         <div class="resource flex-group-center">
-          {{formGroup systemFields.wounds.fields.value value=system.wounds.value stacked=true label="Wounds" }}
-          {{formGroup systemFields.attributes.fields.level.fields.value value=system.attributes.level.value stacked=true label="Level"}}
+          {{ formGroup wounds value=system.wounds.value stacked=true label="Wounds" }}
+          {{formGroup  level  value=system.attributes.level.value stacked=true label="Level"}}
 
       </div>
     </div>
