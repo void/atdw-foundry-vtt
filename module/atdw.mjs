@@ -71,8 +71,8 @@ Hooks.once('init', function () {
   });
 
 
-  	// Dice.
-	CONFIG.Dice.rolls.push(CheckRoll);
+  // Dice.
+  CONFIG.Dice.rolls.push(CheckRoll);
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
@@ -82,6 +82,7 @@ Hooks.once('init', function () {
 /* -------------------------------------------- */
 
 // If you need to add Handlebars helpers, here is a useful example:
+Handlebars.logger.level = 0
 Handlebars.registerHelper('toLowerCase', function (str) {
   return str.toLowerCase();
 });
